@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>{{ htmlString }}</div>
-    <div v-html="htmlString"></div>
+    <button @click="increaseCounter">Add 1</button>
+    <p>{{ counter }}</p>
   </div>
 </template>
 <script>
@@ -9,13 +9,17 @@ export default {
   components: {},
   data() {
     return {
-      htmlString: '<p style="color:red;">빨간색 문자</p>'
+      counter: 0
     }
   },
   setup() {},
   created() {},
   mounted() {},
   unmounted() {},
-  methods: {}
+  methods: {
+    increaseCounter() {
+      this.counter += 1
+    }
+  }
 }
 </script>
